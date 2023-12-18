@@ -10,7 +10,14 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "https://autocomplete-books-api.onrender.com",
+    methods: "GET",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
