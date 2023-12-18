@@ -13,7 +13,7 @@ const app = express();
 // app.use(cors(corsOptions));
 app.use(
   cors({
-    origin: "https://autocomplete-books-api.onrender.com",
+    origin: "https://autocomplete-books.onrender.com",
     methods: "GET",
     allowedHeaders: "Content-Type,Authorization",
   })
